@@ -1,0 +1,16 @@
+-let menu = ["Home", "Why MISOCIAL", "Features", "Articles", "Pricing"]
+mixin navigation(items, prefix)
+    nav.nav(class=prefix + '__nav')
+        ul.list(class=prefix + '__list')
+            for item in items 
+                li.item(class=prefix + '__item') 
+                   a(href="#") #{item}
+header.header 
+    .container.header__container
+        a.header__logo.logo(href="index.html") 
+            img(src="img/logo.png", alt="Misocial")
+        div.header__menu.menu
+            +navigation(menu, 'header')
+            a.btn.header__btn(href='#') GET STARTED
+        .burger
+            .burger-body

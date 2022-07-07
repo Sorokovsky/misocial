@@ -1,0 +1,110 @@
+header div .burger
+    display: none 
+.header
+    position: absolute
+    z-index: 10000
+    padding: 48rem 0
+    width: 100%
+    top: 0
+    left: 0
+    &__container
+        display: flex
+        align-items: center
+        gap: 50rem
+        justify-content: space-between
+        div
+            display: flex
+            align-items: center
+            gap: 30rem
+            flex-wrap: wrap
+    &__list
+        li a 
+            padding-left: 24rem
+            padding-right: 28rem
+            padding-bottom: 14rem
+            color: rgb(255, 255, 255)
+            position: relative
+            &:after
+                content: ""
+                bottom: 0
+                left: 0
+                position: absolute
+                display: block
+                width: 100%
+                height: 2rem
+                background-color: #ffffff
+                transform: scaleX(0)
+                transition: .3s all linear
+            &:hover:after
+                transform: scaleX(1)
+@media screen and (max-width: 1202px)
+    ul.header__list > li > a
+        padding-left: 10rem
+        padding-right: 14rem
+    .btn
+        padding:16.5rem 17rem
+    .header
+        padding: 20rem 0
+@media screen and (max-width: 930px)
+    .header
+        padding: 10rem 0
+    .logo
+        max-width: 200rem
+    header div .burger
+        display: block
+        width: 40rem
+        top: -10rem
+        position: relative
+        &:before, &:after, &-body
+            content: ""
+            position: absolute
+            display: block
+            width: 100%
+            height: 2rem
+            background-color: #fff
+            top: 0
+            left: 0
+            transition: 0.3s all linear
+        &-body
+            top: 10rem
+        &:after
+            top: 20rem
+        &._active
+            &:before
+                transform: translateY(10rem) rotate(45deg)
+            &:after
+                transform: translateY(-10rem) rotate(-45deg)
+            div
+                transform: scale(0)
+    div.menu
+        position: fixed
+        top:65rem
+        padding-top: 10rem
+        padding-bottom: 75rem
+        left: -100%
+        width: 100%
+        background-color: rgba(110,69,226, 0.5)
+        height: 100%
+        align-items: flex-start
+        justify-content: center
+        overflow-x: auto
+        transition: .3s all linear
+        &._active
+            left: 0
+        ul 
+            flex-direction: column
+            li a
+                display: block
+                margin-bottom: 15rem
+                font-size: 35rem
+    body._lock
+        overflow: hidden
+@media screen and (max-width:403px)
+    .header__menu
+        display: block
+        nav
+            display: block
+            text-align: center
+            margin: 0 auto
+        a
+            margin: 0 auto

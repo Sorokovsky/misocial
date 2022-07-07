@@ -1,0 +1,41 @@
+.hero
+    min-height: 100vh
+    background-image: linear-gradient(150deg, rgba(136,211,206, 0.7) 0%, rgba(110,69,226, 0.7) 100%), url("../img/heroBg.jpg")
+    background-size: cover
+    background-position: center
+    &__container
+        padding-top: 90rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        min-height: 100vh
+    &__title
+        margin-bottom: 42rem
+    &__subtitle
+        margin-bottom: 35rem
+    &__text
+        max-width: 387rem
+        color: #fff
+        margin-bottom: 181rem
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 64rem
+        height: 64rem
+        background-color: #fff
+        overflow: hidden
+        border-radius: 50%
+        transition: .3s all linear
+        animation: grav .9s infinite alternate
+        &:hover
+            transform: scale(1.5)
+        img
+            width: 14rem
+            height: 16rem
+@keyframes grav
+    from
+        transform: translateY(0)
+    to
+        transform: translateY(50rem)
