@@ -1,0 +1,65 @@
+.footer
+    padding: 26rem 0
+    &__container
+        display: block
+    &-top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1rem solid #f2f2f3
+        padding-bottom: 30rem
+        padding-top: 30rem
+        div
+            display: flex
+            align-items: center
+            gap: 60rem
+    &__list
+        display: flex
+        align-items: center
+        gap: 50rem
+    &__item a 
+        color: #000000
+        transition: .3s all linear
+        &:hover
+            color:#6e45e2
+    &__btn
+        border: 1rem solid #dbdeea
+        color: #dbdeea
+        text-transform: uppercase
+        &:hover
+            color: #fff
+            background-color: #6e45e2
+            border-color: transparent
+    &-bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: 25rem
+        div
+            display: flex
+            align-items: center
+            gap: 15rem
+
+    &__copy
+        font-size: 14rem
+        color: rgba(106, 106, 119, 0.502)
+    &__link
+        display: block
+        max-width: 19rem
+        img
+            vertical-align: middle
+@media screen and (max-width: 1026px)
+    .footer-top
+        flex-wrap: wrap
+        gap: 15rem
+@media screen and (max-width: 999px)
+    .footer__list
+        flex-wrap: wrap
+        gap: 15rem
+    .footer-top div
+        flex-wrap: wrap
+        gap: 15rem
+@media screen and (max-width: 619px)
+    .footer-bottom
+        flex-wrap: wrap
+        gap: 15rem
