@@ -80,15 +80,18 @@ header div .burger
                 transform: scale(0)
     div.menu
         position: fixed
-        top:65rem
+        top:60rem
         padding-top: 10rem
         padding-bottom: 75rem
         left: -100%
         width: 100%
         background-color: rgba(110,69,226, 0.5)
         height: 100%
-        align-items: flex-start
+        align-items: center
+        flex-wrap: nowrap
+        text-align: center
         justify-content: center
+        flex-direction: column
         overflow-x: auto
         transition: .3s all linear
         &._active
