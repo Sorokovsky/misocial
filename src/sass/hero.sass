@@ -3,6 +3,7 @@
     background-image: linear-gradient(150deg, rgba(136,211,206, 0.7) 0%, rgba(110,69,226, 0.7) 100%), url("../img/heroBg.jpg")
     background-size: cover
     background-position: center
+    position: relative
     &__container
         padding-top: 90rem
         display: flex
@@ -28,6 +29,8 @@
         overflow: hidden
         border-radius: 50%
         transition: .3s all linear
+        position: absolute
+        bottom: 25rem
         animation: grav .9s infinite alternate
         &:hover
             transform: scale(1.5)
